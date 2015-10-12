@@ -8,9 +8,6 @@ import javax.swing.JOptionPane;
 
 public class Factorial {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         String choice = "";
         do{
@@ -18,11 +15,19 @@ public class Factorial {
         }while (!isNumber(choice));
         
         int num = Integer.parseInt(choice);
-        System.out.println("The factorial of " + choice + " is " + calcFact(num));
+        
+        if(calcFact(num) == -1){
+            System.out.println("Negative numbers do not have defined factorials.");
+        }else{
+            System.out.println("The factorial of " + choice + " is " + calcFact(num));
+        }
+        
     }
     public static int calcFact(int n){
         if (n == 0){
             return 1;
+        }else if(n < 0){
+            return -1;
         }else{
             int total = n * calcFact(n-1);
             return total;
