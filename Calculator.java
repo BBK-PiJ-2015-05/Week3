@@ -1,9 +1,10 @@
+/*
+* Week 3 Day 6
+* 1. Dividing Integers
+*/
+
 public class Calculator {
-	
-	/*public Calculator(){
-		super();
-	} */
-	
+		
 	
 	public static int add(int a, int b){
 		return a + b;
